@@ -1,0 +1,514 @@
+:root {
+    --primary-color: #e50914;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.showcase {
+    position: relative;
+    background: url(./media/back.jpg) no-repeat center center;
+    background-size: cover;
+    height: 78vh;
+}
+
+.showcase::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.showcase-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    padding: 0px 30px;
+}
+
+.showcase-top>img {
+    height: 110px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+}
+
+.btn-rounded {
+    border-radius: 3px;
+}
+
+select {
+    padding: 0.5rem 0.1rem 0.5rem 1.5rem;
+    background-color: #000;
+    background-image: url("https://coothead.co.uk/images/world.png");
+    background-repeat: no-repeat;
+    background-size: 0.8em auto;
+    background-position: 0.4em center;
+    font-size: 1rem;
+    color: #fff;
+    margin-right: 1.5rem;
+    border: 1px solid #AAA;
+    border-radius: 3px;
+}
+
+.showcase-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    margin: 8.5rem auto 0px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.125rem;
+    line-height: 4.2rem;
+}
+
+h3 {
+    font-size: 1.625rem;
+    font-weight: 400;
+    margin: 1.5rem 0px 2.5rem;
+}
+
+.sub-title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.email-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem;
+}
+
+.email-form>input {
+    width: 20%;
+    height: 4.3rem;
+    font-size: 1rem;
+    padding: 0px 0.5rem;
+}
+
+.btn-xl {
+    height: 4.3rem;
+    margin-left: 1px;
+    padding: 0 1.25rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 4.3rem;
+    cursor: pointer;
+}
+
+.btn-xl:hover {
+    background-color: #F40612;
+}
+
+hr {
+    width: 100%;
+    height: 8px;
+    background-color: #222;
+    color: #222;
+}
+
+/* Features */
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features>div {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    padding: 4rem 0px;
+}
+
+h2 {
+    font-size: 3.125rem;
+    margin-bottom: 1.3rem;
+}
+
+.feature-text>p {
+    width: 90%;
+    font-size: 1.625rem;
+}
+
+.feature-img {
+    max-width: 40%;
+}
+
+/* FAQs */
+
+.faq {
+    width: 42%;
+    margin: 4.375rem auto;
+}
+
+.faq>h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.accordian {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.625rem;
+    padding: 0.8rem 2.2rem;
+    background-color: #303030;
+    color: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.panel {
+    display: none;
+    font-size: 1.625rem;
+    padding: 2.2rem;
+    background-color: #303030;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+.pre-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem auto 3.2rem;
+}
+
+.pre-footer .email-form {
+    width: 90%;
+}
+
+/* Footer */
+.footer {
+    width: 45%;
+    margin: 3.2rem auto;
+    font-size: 0.8125rem;
+    color: #737373;
+}
+
+.footer-contact {
+    font-size: 1rem;
+}
+
+.footer-contact>a {
+    text-decoration: none;
+    color: #737373;
+}
+
+.footer-contact>a:hover {
+    text-decoration: underline;
+}
+
+.footer-table {
+    border-collapse: separate;
+    border-spacing: 0px 1rem;
+    border-left-style: 0;
+    justify-items: start;
+    width: 100%;
+    margin: 1.875rem 0px;
+}
+
+td:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer .language-selector {
+    line-height: 1.7;
+    color: #737373;
+    padding-left: 1.8rem;
+    padding-right: 0.5rem;
+}
+
+.footer-end-text {
+    margin: 1.5rem 0px 0.8125rem;
+}
+
+/* Media Queries */
+
+/* XXL */
+@media(min-width: 1400px) {
+
+    h1 {
+        font-size: 4rem;
+        max-width: 800px;
+    }
+
+    input {
+        min-width: 500px;
+    }
+
+    .pre-footer {
+        max-width: 950px;
+    }
+
+    .btn-xl {
+        width: auto;
+    }
+}
+
+/* LG */
+@media((min-width: 992px) and (max-width: 1400px)) {
+
+    .showcase {
+        height: 78vh;
+    }
+
+    .showcase-top>img {
+        height: 90px;
+    }
+
+    h1 {
+        max-width: 640px;
+        line-height: 1.1;
+    }
+
+    input {
+        min-width: 450px;
+    }
+
+    .features>div {
+        width: 90%;
+    }
+
+    .faq {
+        width: 70%;
+    }
+
+    .footer {
+        width: 80%;
+    }
+}
+
+/* SM */
+@media((min-width: 768px) and (max-width: 992px)) {
+
+    .showcase-top>img {
+        height: 75px;
+    }
+
+    h1 {
+        max-width: 640px;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    .showcase-content>p {
+        max-width: 450px;
+        text-align: center;
+        font-size: 1.437rem;
+    }
+
+    .email-form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .email-form>input {
+        width: 70%;
+        height: 48px;
+        margin: 0px auto 16px;
+    }
+
+    .email-form a {
+        display: inline;
+        min-height: 40px;
+        margin: 0px auto;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 25px;
+    }
+
+    .features {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .features>div {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-text {
+        text-align: center;
+    }
+
+    .feature-text p {
+        font-size: 1.25rem;
+        margin: 0px auto;
+    }
+
+    .feature-img {
+        max-width: 85%;
+    }
+
+    .features>div:nth-of-type(even) {
+        flex-direction: column-reverse;
+    }
+
+    .faq {
+        width: 80%;
+    }
+
+    .footer {
+        width: 80%;
+    }
+}
+
+/* Very SM */
+@media(max-width: 768px) {
+
+    .showcase {
+        height: 60vh;
+    }
+
+    .showcase-content {
+        margin: 5rem auto 0;
+    }
+
+    .showcase-top {
+        padding: 0 20px;
+    }
+
+    .showcase-top>img {
+        height: 60px;
+    }
+
+    select {
+        margin-right: 1rem;
+    }
+
+    h1 {
+        width: 90%;
+        max-width: 640px;
+        font-size: 1.75rem;
+        line-height: 1.1;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        margin: 1rem auto;
+    }
+
+    .sub-title {
+        max-width: 450px;
+        font-size: 1.125rem;
+        padding: 0 10%;
+    }
+
+    .email-form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .email-form>input {
+        width: 90%;
+        height: 48px;
+        margin: 0px auto 16px;
+    }
+
+    .email-form a {
+        display: inline;
+        min-height: 40px;
+        margin: 0px auto;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 25px;
+    }
+
+    .features {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .features>div {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-text>h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .feature-text>p {
+        font-size: 1.125rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .feature-img {
+        max-width: 90%;
+    }
+
+    .features>div:nth-of-type(even) {
+        flex-direction: column-reverse;
+    }
+
+    .faq {
+        width: 90%;
+        margin-bottom: 0;
+    }
+
+    .faq>h2 {
+        font-size: 1.625rem;
+    }
+
+    .accordian {
+        font-size: 1.125rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .panel {
+        font-size: 1.125rem;
+        padding: 1.2rem;
+    }
+
+    .pre-footer {
+        margin-top: 2rem;
+    }
+
+    .footer {
+        width: 80%;
+    }
+}
